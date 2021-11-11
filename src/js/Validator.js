@@ -9,7 +9,7 @@ export default class Validator {
    */
 
   constructor() {
-    this.goodCharactersRule = /\+?[0-9]{1,2}? \(?[0-9]{1,3}\)? ?[0-9]{1,3} ?-?[0-9]{1,2}-? ?[0-9]{1,2}/g;
+    this.goodCharactersRule = /^\+?[0-9]{1,2}? ?\(?[0-9]{1,3}\)? ?[0-9]{1,3} ?-?[0-9]{1,2}-? ?[0-9]{1,2}$/gm;
     this.russian8 = /^8 /g;
   }
 
@@ -20,8 +20,7 @@ export default class Validator {
    */
   transformPhone(str) {
     if (!this.goodCharactersRule.test(str)) {
-      console.log(this.goodCharactersRule.test(str))
-      throw new Error('Phone should contain only digits, (), - or spaces');
+      throw new Error('Phone should conatin digits, (), - or spaces');
     }
 
     return str
