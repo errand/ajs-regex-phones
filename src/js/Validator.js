@@ -19,8 +19,10 @@ export default class Validator {
    * @return {string} true if OK.
    */
   transformPhone(str) {
+    console.log(this.goodCharactersRule.test(str));
+    console.log(str.match(this.goodCharactersRule));
     if (!this.goodCharactersRule.test(str)) {
-      throw new Error('Phone should conatin digits, (), - or spaces');
+      throw new Error('Phone should contain digits, (), - or spaces');
     }
 
     return str
