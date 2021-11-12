@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/m3bfugs00qt2kx8w?svg=true)](https://ci.appveyor.com/project/errand/ajs-regex-phones)
+
 ## Телефоны (задача со звёздочкой)
 
 **Важно**: данная задача не является обязательной 
